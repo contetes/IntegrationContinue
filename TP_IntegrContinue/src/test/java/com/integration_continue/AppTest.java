@@ -1,4 +1,4 @@
-package com.TP_IntegrContinue;
+package com.integration_continue;
 
 import junit.framework.Test;
 import junit.framework.TestCase;
