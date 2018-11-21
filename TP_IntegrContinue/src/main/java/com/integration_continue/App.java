@@ -1,4 +1,4 @@
-package com.TP_IntegrContinue;
+package com.integration_continue;
 
 /**
  * Hello world!
