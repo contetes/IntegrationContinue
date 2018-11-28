@@ -1,4 +1,4 @@
-package connectMySQL;
+package db.connectsql;
 
 import java.sql.Connection;
 import java.sql.SQLException;
@@ -14,6 +14,8 @@ public class JDBCConfigSol1 {
 	private static final String DB_URL="jdbc:mysql://127.0.0.1/maven";
 	private static final String DB_USER = "root";
 	private static final String DB_PSWD = "";
+	
+	private JDBCConfigSol1(){}
 	
 	public static Connection getConnection(){
 		Connection connection = null;
