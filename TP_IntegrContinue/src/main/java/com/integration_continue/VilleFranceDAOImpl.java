@@ -18,9 +18,11 @@ public class VilleFranceDAOImpl {
 	public void findVille() throws SQLException {
 		Connection con = JDBCConfigSol1.getConnection();
 		String query = "SELECT * FROM ville_france";
-		try (Statement statement = con.createStatement(); ResultSet resultSet = statement.executeQuery(query)){
+		try (Statement statement = con.createStatement() ){
+			try(ResultSet resultSet = statement.executeQuery(query)){
 			while(resultSet.next()){
 				LOGGER.info("nom commune : " + resultSet.getString("Nom_commune"));
+			}
 			}
 					
 		} catch(SQLException e){
