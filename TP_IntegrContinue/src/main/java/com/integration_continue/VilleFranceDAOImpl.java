@@ -14,12 +14,13 @@ public class VilleFranceDAOImpl {
 	 * Logger
 	 */
 	private static final Logger LOGGER = Logger.getLogger(VilleFranceDAOImpl.class.getName());
+
 	public void findVille() throws SQLException {
 		Connection con = JDBCConfigSol1.getConnection();
 		String query = "SELECT * FROM ville_france";
 		try (Statement statement = con.createStatement(); ResultSet resultSet = statement.executeQuery(query)){
 			while(resultSet.next()){
-				LOGGER.log(Level.INFO,"nom commune : " + resultSet.getString("Nom_commune"));
+				LOGGER.info("nom commune : " + resultSet.getString("Nom_commune"));
 			}
 					
 		} catch(SQLException e){
