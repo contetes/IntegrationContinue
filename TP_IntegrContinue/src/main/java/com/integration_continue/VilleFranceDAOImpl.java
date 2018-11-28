@@ -5,21 +5,24 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
-//import connectMySQL.JDBCConfigSol1;
-import connectMySQL.JDBCConfigurationSol2;
+import java.util.logging.*;
+import connectMySQL.JDBCConfigSol1;
 
 public class VilleFranceDAOImpl {
-
+	/**
+	 * Logger
+	 */
+	private static final Logger LOGGER = Logger.getLogger(VilleFranceDAOImpl.class.getName());
 	public void findVille() throws SQLException {
-		Connection con = JDBCConfigurationSol2.getConnection();
+		Connection con = JDBCConfigSol1.getConnection();
 		String query = "SELECT * FROM ville_france";
 		try (Statement statement = con.createStatement(); ResultSet resultSet = statement.executeQuery(query)){
 			while(resultSet.next()){
-				System.out.println("nom commune : " + resultSet.getString("Nom_commune"));
+				LOGGER.log(Level.INFO,"nom commune : " + resultSet.getString("Nom_commune"));
 			}
 					
 		} catch(SQLException e){
-			e.printStackTrace();
+			LOGGER.log(Level.INFO, "Statement or resulSet encountered a problem");
 		} 
 	}
 
