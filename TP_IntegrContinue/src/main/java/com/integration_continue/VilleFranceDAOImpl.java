@@ -11,7 +11,7 @@ import connectMySQL.JDBCConfigurationSol2;
 
 public class VilleFranceDAOImpl {
 	
-	public void findVille() throws SQLException, NullPointerException {
+	public void findVille() throws SQLException {
 		Statement statement = null;
 		ResultSet resultSet = null;
 		try {
@@ -26,8 +26,13 @@ public class VilleFranceDAOImpl {
 		} catch(SQLException e){
 			e.printStackTrace();
 		} finally {
-			statement.close();
-			resultSet.close();
+			if ((statement==null) || (resultSet==null)){
+				throw new NullPointerException("Null exception!");
+			}
+			else {
+				statement.close();
+				resultSet.close();
+			}
 		}
 	}
 
