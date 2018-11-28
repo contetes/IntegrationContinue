@@ -12,28 +12,18 @@ import connectMySQL.JDBCConfigurationSol2;
 public class VilleFranceDAOImpl {
 	
 	public void findVille() throws SQLException {
-		Statement statement = null;
-		ResultSet resultSet = null;
-		try {
-			Connection con = JDBCConfigurationSol2.getConnection();
-			statement = con.createStatement();
+		Connection con = JDBCConfigurationSol2.getConnection();
+		String query = "SELECT * FROM ville_france";
+		try (Statement statement = con.createStatement()){
 			
-			resultSet = statement.executeQuery("SELECT * FROM ville_france");
+			ResultSet resultSet = statement.executeQuery(query);
 			while(resultSet.next()){
 				System.out.println("nom commune : " + resultSet.getString("Nom_commune"));
 				
 			}
 		} catch(SQLException e){
 			e.printStackTrace();
-		} finally {
-			if ((statement==null) || (resultSet==null)){
-				throw new NullPointerException("Null exception!");
-			}
-			else {
-				statement.close();
-				resultSet.close();
-			}
-		}
+		} 
 	}
 
 }
