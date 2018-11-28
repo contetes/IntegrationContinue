@@ -15,12 +15,14 @@ public class VilleFranceDAOImpl {
 		Connection con = JDBCConfigurationSol2.getConnection();
 		String query = "SELECT * FROM ville_france";
 		try (Statement statement = con.createStatement()){
-			
-			ResultSet resultSet = statement.executeQuery(query);
-			while(resultSet.next()){
-				System.out.println("nom commune : " + resultSet.getString("Nom_commune"));
-				
+			try (ResultSet resultSet = statement.executeQuery(query)){
+				while(resultSet.next()){
+					System.out.println("nom commune : " + resultSet.getString("Nom_commune"));
+				}
+			} catch (SQLException e1){
+				e1.printStackTrace();
 			}
+			
 		} catch(SQLException e){
 			e.printStackTrace();
 		} 
