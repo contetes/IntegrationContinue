@@ -11,12 +11,14 @@ import connectMySQL.JDBCConfigurationSol2;
 
 public class VilleFranceDAOImpl {
 	
-	public void findVille() {
+	public void findVille() throws SQLException {
+		Statement statement = null;
+		ResultSet resultSet = null;
 		try {
 			Connection con = JDBCConfigurationSol2.getConnection();
-			Statement statement = con.createStatement();
+			statement = con.createStatement();
 			
-			ResultSet resultSet = statement.executeQuery("SELECT * FROM ville_france");
+			resultSet = statement.executeQuery("SELECT * FROM ville_france");
 			while(resultSet.next()){
 				System.out.println("nom commune : " + resultSet.getString("Nom_commune"));
 				
@@ -25,6 +27,9 @@ public class VilleFranceDAOImpl {
 			statement.close();
 		} catch(SQLException e){
 			e.printStackTrace();
+		} finally {
+			statement.close();
+			resultSet.close();
 		}
 	}
 
