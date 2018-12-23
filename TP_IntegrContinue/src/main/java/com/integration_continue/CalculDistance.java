@@ -76,8 +76,7 @@ public class CalculDistance extends HttpServlet {
 			double calcul = rayon
 					* Math.acos(Math.cos(latitudeUn) * Math.cos(latitudeDeux) * Math.cos(longitudeDeux - longitudeUn)
 							+ Math.sin(latitudeUn) * Math.sin(latitudeDeux));
-			double distance = Math.round(calcul * 100) / 100;
-			return distance;
+			return (double)(Math.round(calcul * 100)) / 100;
 		} catch (SQLException e1) {
 			LOGGER.log(Level.INFO, e1.toString());
 			return 0;

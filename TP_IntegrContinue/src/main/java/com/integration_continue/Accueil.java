@@ -26,6 +26,7 @@ public class Accueil extends HttpServlet {
 	/**
 	 * @see HttpServlet#service(HttpServletRequest request, HttpServletResponse response)
 	 */
+    @Override
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		this.getServletContext().getRequestDispatcher( VUE ).forward( request, response );
 
