@@ -1,0 +1,51 @@
+@CHARSET "UTF-8";
+
+h1 {
+	text-align:center;
+	color: #143876;
+}
+
+h5 {
+	text-align:center;
+	color: #143876;
+}
+
+form {
+	text-align: center;
+	color: #3878e6;
+}
+
+input {
+	border: 0.5px solid #1f50a4;
+	border-radius: 4px;
+}
+
+input.subm {
+	background-color: #3878e6;
+	color: white;
+}
+
+fieldset.bordure {
+	text-align: center;
+	color: #3878e6;
+}
+
+p.begin {
+	text-align: center;
+	color: #3878e6;
+}
+
+.actived {
+	color: #495057;
+	background-color: transparent;
+	border: 1px solid;
+	border-color: #b2b5b9 #b2b5b9 #fff;
+	border-top-left-radius: .25rem;
+	border-top-right-radius: .25rem;
+	display: block;
+	padding: .5rem 1rem;
+}
+
+.actived:hover{
+	text-decoration: none;
+}

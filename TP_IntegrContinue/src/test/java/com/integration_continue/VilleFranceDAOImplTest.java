@@ -11,8 +11,10 @@ public class VilleFranceDAOImplTest extends TestCase {
 	
 	@Test
 	public void testGetConnexion() throws SQLException {
-		Connection con = db.connectsql.JDBCConfigSol1.getConnection();
-		assertNotNull(con);
+	    Connection connection = null;
+
+	    connection = db.connectsql.JDBCConfigSol1.getConnection();
+		assertNotNull(connection);
 	}
 	
 }

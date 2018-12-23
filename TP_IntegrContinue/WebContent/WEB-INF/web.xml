@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" version="3.0">
+  <display-name>TP_IntegrContinue</display-name>
+  <welcome-file-list>
+    <welcome-file>/jsp/Accueil.jsp</welcome-file>
+  </welcome-file-list>
+  <servlet>
+    <servlet-name>Accueil</servlet-name>
+    <servlet-class>com.integration_continue.Accueil</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Accueil</servlet-name>
+    <url-pattern>/accueil</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>CalculDistance</servlet-name>
+    <servlet-class>com.integration_continue.CalculDistance</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>CalculDistance</servlet-name>
+    <url-pattern>/calculDistance</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>Distance</servlet-name>
+    <servlet-class>com.integration_continue.Distance</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Distance</servlet-name>
+    <url-pattern>/distance</url-pattern>
+  </servlet-mapping>
+  <servlet>
+  	<servlet-name>AffichageVilles</servlet-name>
+  	<servlet-class>com.integration_continue.AffichageVilles</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>AffichageVilles</servlet-name>
+  	<url-pattern>/villes</url-pattern>
+  </servlet-mapping>
+</web-app>
