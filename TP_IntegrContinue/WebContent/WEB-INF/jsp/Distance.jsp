@@ -55,7 +55,11 @@
 				</c:when>
 				<c:when test="${distance != erreur }">
 					<p>
-						La distance calculée entre les deux villes est de :
+						La distance calculée entre
+						<c:out value="${villeUn}" />
+						et
+						<c:out value="${villeDeux}" />
+						est de :
 						<c:out value="${distance}" />
 						km(s)
 					</p>

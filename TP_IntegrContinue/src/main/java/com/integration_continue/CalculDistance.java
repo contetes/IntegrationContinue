@@ -56,10 +56,12 @@ public class CalculDistance extends HttpServlet {
 			request.setAttribute("distance", ""+distance);
 
 		}
+		request.setAttribute("villeUn", villeUn);
+		request.setAttribute("villeDeux", villeDeux);
 		this.getServletContext().getRequestDispatcher("/WEB-INF/jsp/Distance.jsp").forward(request, response);
 	}
 
-	private static double getDistance(String villeUn, String villeDeux) {
+	private static double getDistance(String villeUn, String villeDeux) throws IOException {
 		double latitudeUn = 0;
 		double latitudeDeux = 0;
 		double longitudeUn = 0;
