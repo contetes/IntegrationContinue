@@ -6,7 +6,7 @@ import org.junit.BeforeClass;
 import org.junit.Test;
 
 public class DistanceTest {
-	public static Distance distance;
+	private static Distance distance;
 	
 	@BeforeClass
 	public static void beforeClass(){

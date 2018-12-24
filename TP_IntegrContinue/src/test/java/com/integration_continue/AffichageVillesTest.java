@@ -6,7 +6,7 @@ import org.junit.BeforeClass;
 import org.junit.Test;
 
 public class AffichageVillesTest {
-	public static AffichageVilles villes;
+	private static AffichageVilles villes;
 
 	@BeforeClass
 	public static void beforeClass(){

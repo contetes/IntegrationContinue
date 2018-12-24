@@ -6,7 +6,7 @@ import org.junit.BeforeClass;
 import org.junit.Test;
 
 public class AccueilTest {
-	public static Accueil accueil;
+	private static Accueil accueil;
 	
 	@BeforeClass
 	public static void beforeClass(){

@@ -6,7 +6,7 @@ import org.junit.BeforeClass;
 import org.junit.Test;
 
 public class CalculDistanceTest {
-	public static CalculDistance calcul;
+	private static CalculDistance calcul;
 	
 	@BeforeClass
 	public static void beforeClass(){
