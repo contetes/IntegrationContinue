@@ -33,7 +33,7 @@ public class CalculDistanceTest {
 		Boolean firstVerify = false;
 		try {
 			firstVerify = JDBCConfigSol1.verifyCityName("Angers");
-			assertTrue("Angers exite dans la bdd",firstVerify);
+			assertTrue("Angers existe dans la bdd",firstVerify);
 		} catch (SQLException e) {
 			LOGGER.log(Level.INFO, e.toString());
 		}
@@ -44,7 +44,7 @@ public class CalculDistanceTest {
 		Boolean firstVerify = false;
 		try {
 			firstVerify = JDBCConfigSol1.verifyCityName("Inexistant");
-			assertFalse("Angers exite dans la bdd",firstVerify);
+			assertFalse("Inexistante dans la bdd",firstVerify);
 		} catch (SQLException e) {
 			LOGGER.log(Level.INFO, e.toString());
 		}
