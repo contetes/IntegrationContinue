@@ -162,7 +162,7 @@ public class JDBCConfigSol1 {
 	 */
 	public static Properties getProperties() throws IOException{
 		String rootPath = Thread.currentThread().getContextClassLoader().getResource("ressources").getPath();
-		String configPath = rootPath + "config.properties";
+		String configPath = rootPath + "/config.properties";
 		Properties prop = new Properties();
 		prop.load(new FileInputStream(configPath));
 		return prop;
